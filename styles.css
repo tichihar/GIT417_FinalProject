@@ -271,10 +271,11 @@ nav li {
     height: 2rem;
     background: var(--lt-brown);
     border-radius: 35px/35px;
-    margin: 0;
+    margin: unset;
     display: grid;
     place-content: center;
     filter: drop-shadow(0px 0px 5px var(--cream-brown));
+    margin-left: 15px;
 }
 #light-mode-switch::after {
     content: "";
@@ -291,6 +292,9 @@ nav li {
     transition: .5s;
     transform: translateX(1rem);
     background: var(--brown);
+}
+.smaller {
+    font-size: 14px;
 }
 
 /* checkout button */
@@ -525,7 +529,7 @@ main {
     z-index: -1;
     position: absolute;
     right: -30px;
-    top: 10rem;
+    top: 1rem;
     transform: scale(1.23) rotate(9deg);
     filter: drop-shadow(0px -3px 13px var(--cream-brown));
 }
@@ -897,17 +901,18 @@ textarea {
  border-left: .2rem solid var(--green); 
 }
 
+/* #bottom-pic */
 #bottom-pic {
     overflow: hidden;
     position: relative;
-    height: 20rem;
+    height: 15rem;
     width: 100%;
 }
 #bottom-pic img {
     position: absolute;
     width: 770px;
     left: calc(50% - 400px);
-    top: 5rem;
+    top: 2rem;
     transform: rotate(-5deg);
 }
 
@@ -927,10 +932,7 @@ footer {
     align-items: center;
     gap: .5rem;
 }
-#social-media svg {
-    fill: var(--cream);
-}
-#social-media svg:nth-child(2) path {
+footer #social-media svg, footer #social-media a:nth-child(2) path {
     fill: var(--cream);
 }
 
@@ -1003,7 +1005,7 @@ body.dark, #summary.dark, #post-checkout.dark #popup-item {
 #vinyls > section.dark::after, #contact.dark {
     background: #421500f0;
 }
-#sp-offer.dark, .total-line.dark, #summary.dark .go-back-btn::before, #summary.dark .go-back-btn::after, #post-checkout.dark .go-back-btn::before, #post-checkout.dark .go-back-btn::after, #post-checkout.dark .div-line {
+#sp-offer.dark, .total-line.dark, #summary.dark .go-back-btn::before, #summary.dark .go-back-btn::after, #post-checkout.dark .go-back-btn::before, #post-checkout.dark .go-back-btn::after, #post-checkout.dark .div-line, footer.dark {
     background: var(--cream);
 }
 #summary.dark .div-line {
@@ -1011,13 +1013,13 @@ body.dark, #summary.dark, #post-checkout.dark #popup-item {
 }
 
 /* font color */
-nav a.dark, #sumbit.dark {
+.smaller.dark, nav a.dark, #sumbit.dark {
     color: var(--white);
 }
 #title-holder.dark, .content.dark, div.banner-holder.dark h2, #contact.dark, #contact.dark, #form.dark > div > textarea, #form.dark #submit, #summary.dark, dl.dark, #total-holder.dark, #banner-holder h2.dark, #post-checkout.dark #popup-holder {
     color: var(--cream);
 }
-#lamb-special.dark, #lamb-special p.dark {
+#lamb-special.dark, #lamb-special p.dark, footer.dark p {
     color: var(--dk-brown);
 }
 .number.dark, dl.dark .remove:hover {
@@ -1052,9 +1054,9 @@ nav a.dark, #sumbit.dark {
 #light-mode-switch.dark {
     filter: unset;
 }
-/* #form.dark > div > input {
-    filter: drop-shadow(0px 1px 3.5px #0f0b09);
-} */
+footer.dark #social-media svg, footer.dark #social-media a:nth-child(2) path {
+    fill: var(--dk-brown);
+}
 
 /* hover */
 a.dark:hover {
